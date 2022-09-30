@@ -5,11 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        section.container{
+            display: flex;
+            width: 100%;
+                      
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            
+        }
+        .btn{
+                background: black;
+                padding: 10px 15px;
+                border-radius: 20px;
+                color: white;
+                text-decoration: none;
+            }
+
+            section div{
+                display: flex;
+                flex-direction: column;
+                max-width: 322px;
+                margin: auto;
+                text-align: center;
+            }
+    </style>
 </head>
 <body>
-    <h1>LOGADO COM SUCESSO</h1>
-
-    <a href="/logout">Fazer logoff</a>
+  <section class="container">
+      <div>
+        <h1>LOGADO COM SUCESSO</h1>       
+      </div>
+      <a class="btn" href="/logout">Fazer logoff</a>
+  </section>
     
 </body>
 </html>

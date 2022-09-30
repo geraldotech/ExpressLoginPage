@@ -2,75 +2,61 @@
     <header>
         <title>Node Express session login page</title>
         <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+               
+            }
             .container {
                 display: flex;
                 height: 100vh;
-                flex-direction:column;
-                justify-content:center;
-                align-items:center;
+                width: 100%;
+                max-width: 992px;
+                gap: 50px;                         
+                flex-direction: column;
+                align-items: center;
+                
+                padding: 30px;                
+            }
+            .container section{
+                text-align: center;      
+            }
+            .container section h1{
+                margin-bottom: 20px;
             }
             .container div {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-             
+                align-items: center;             
             }
 
             div > span {
                 font-size: 2rem;
             }
+            .btn{
+                background: black;
+                padding: 10px 15px;
+                border-radius: 20px;
+                color: white;
+                text-decoration: none;
+            }
         </style>
     </header>
 
 <body>
-<h1>Home page</h1>
-
-<a href="/admin/login">Fazer Login</a>
-
 <div class="container">
+<section>
+    <h1>Home page</h1>
+    <p>Node Express session login page</p>
+</section>
 
-<div>
-    <span id="hora"></span>
-    <span class="txt">Horas</span>
-</div>
 
-<div>
-    <span id="min"></span>
-    <span class="txt">Min</span>
-</div>
-
-<div>
-    <span id="sgs"></span>
-    <span class="txt">Sgs</span>
-</div>
-
-<div>
-    <span id="ms"></span>
-    <span class="txt">Milliseconds</span>
-</div>
+    <a class="btn" href="/admin/login">Fazer Login</a>
 
 </div><!-- container -->
 
 </body>
-
-<script>
- let hora = document.getElementById("hora");
- let min = document.getElementById("min");
- let sgs = document.getElementById("sgs");
-// let ms = document.getElementById("ms");
-setInterval(function(){
-    let d = new Date();
-    let h = d.getHours();
-    let m = d.getMinutes();
-    let s = d.getSeconds();
-    let mss = d.getMilliseconds();
-
-    hora.innerHTML = h;
-    min.innerHTML = m;
-    sgs.innerHTML = s;
-    //ms.innerHTML = mss;
-    
-})
-
-</script>
 </html>
