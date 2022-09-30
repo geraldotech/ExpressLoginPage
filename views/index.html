@@ -1,0 +1,76 @@
+<html>
+    <header>
+        <title>clock</title>
+        <style>
+            .container {
+                display: flex;
+                height: 100vh;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+            }
+            .container div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+             
+            }
+
+            div > span {
+                font-size: 2rem;
+            }
+        </style>
+    </header>
+
+<body>
+<h1>Home page</h1>
+
+<a href="/admin/login">Fazer Login</a>
+
+<div class="container">
+
+<div>
+    <span id="hora"></span>
+    <span class="txt">Horas</span>
+</div>
+
+<div>
+    <span id="min"></span>
+    <span class="txt">Min</span>
+</div>
+
+<div>
+    <span id="sgs"></span>
+    <span class="txt">Sgs</span>
+</div>
+
+<div>
+    <span id="ms"></span>
+    <span class="txt">Milliseconds</span>
+</div>
+
+</div><!-- container -->
+
+</body>
+
+<script>
+ let hora = document.getElementById("hora");
+ let min = document.getElementById("min");
+ let sgs = document.getElementById("sgs");
+// let ms = document.getElementById("ms");
+setInterval(function(){
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let mss = d.getMilliseconds();
+
+    hora.innerHTML = h;
+    min.innerHTML = m;
+    sgs.innerHTML = s;
+    //ms.innerHTML = mss;
+    
+})
+
+</script>
+</html>
