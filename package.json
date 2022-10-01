@@ -1,6 +1,6 @@
 {
-  "name": "express_Login_Page",
-  "version": "1.0.1",
+  "name": "ExpressLoginPage",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
