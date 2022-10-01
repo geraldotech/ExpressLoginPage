@@ -58,8 +58,8 @@ res.render('index',{});
 });
 
 //sobre
-app.get('/sobre',(req,res)=>{
-    res.render('secreta',{});
+app.get('/about',(req,res)=>{
+    res.render('secret',{});
     return res.json({ msg: 'logging you out' })
 })
 
