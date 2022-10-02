@@ -1,62 +1,25 @@
-<html>
-    <header>
-        <title>Node Express session login page</title>
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body{
-               
-            }
-            .container {
-                display: flex;
-                height: 100vh;
-                width: 100%;
-                max-width: 992px;
-                gap: 50px;                         
-                flex-direction: column;
-                align-items: center;
-                
-                padding: 30px;                
-            }
-            .container section{
-                text-align: center;      
-            }
-            .container section h1{
-                margin-bottom: 20px;
-            }
-            .container div {
-                display: flex;
-                flex-direction: column;
-                align-items: center;             
-            }
-
-            div > span {
-                font-size: 2rem;
-            }
-            .btn{
-                background: black;
-                padding: 10px 15px;
-                border-radius: 20px;
-                color: white;
-                text-decoration: none;
-            }
-        </style>
-    </header>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Express session login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="container">
-<section>
-    <h1>Home page</h1>
-    <p>Node Express session login page</p>
-</section>
-
-
-    <a class="btn" href="/admin/login">Fazer Login</a>
-
-</div><!-- container -->
-
+    <section class="container">
+        <div>
+            <h1>Home page</h1>
+            <p>Node Express session login page</p>
+        </div>
+        
+        
+            <a class="btn" href="/admin/login">Fazer Login</a>
+            <footer>
+                <p>copyright 2022</p>
+            </footer>
+        </section><!-- container -->
+      
 </body>
 </html>
