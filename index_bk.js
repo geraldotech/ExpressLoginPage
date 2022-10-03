@@ -4,7 +4,6 @@ const path = require('path'); //nativo node
 const bodyParser = require('body-parser');
 var session = require('express-session');
 
-
 //body-parser
 app.use( bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -16,7 +15,6 @@ app.set('view engine', 'html');
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.set('views',path.join(__dirname, '/views'));
 
-
 //express session
 app.use(session({ 
     secret: 'keyboard cat', 
@@ -27,46 +25,31 @@ app.get('/admin/login',(req,res)=>{
     if(req.session.login == null){        
        res.render('login');
        //res.send('tente novamente');
-    } else if(req.session.login == "isabella") {
-        res.send("oi geraldo");
-    }else {
+       error.innerHTML = "tente again!";
+    } else {
     //res.send(req.session.login);
     res.render('panel');  
-}         
-
+}                 
 }); 
 
 var usuarios = [
     {
-        login: 'ge',
-        senha: '123',
-    },
-    {
-        login: 'isa',
+        login: 'geraldo',
         senha: '123',
     }
 ]
 
-//so consegue usar o post devido ao body parser
 
+//so consegue usar o post devido ao body parser
 app.post('/admin/login',(req,res)=>{
-    console.log("recupera login",req.body.login) //recupera login no console
-    const usuario = req.body.login;
+    console.log(req.body.login) //recupera login no console
     usuarios.map(function(val){
-        console.log("val_login",val.login)
-     if(val.login == req.body.login && val.senha == req.body.senha){
-       //  req.session.login = 'geraldo';   
-        if(usuario == 'ge'){
-            res.render('panel',{usuario});
+        //console.log(val.login)
+    if(val.login == req.body.login && val.senha == req.body.senha){
+            req.session.login = 'geraldo';           
         }
-        if(usuario == 'isa'){
-            res.render('isa',{usuario});
-        }
-            
-       } 
-        
-    })//map
-    //res.send('ok');  
+    })
+    //res.send('ok');
     res.redirect('/admin/login');  
 });
 
@@ -88,7 +71,7 @@ app.get('/about',(req,res)=>{
     res.clearCookie('connect.sid')
       res.redirect('/'); //Inside a callback… bulletproof!
      });
-  });
+  })
 
 //404
 app.use((req,res,next)=>{
