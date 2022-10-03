@@ -24,12 +24,13 @@ app.use(session({
 app.get('/admin/login',(req,res)=>{
     if(req.session.login == null){        
        res.render('login');
-       res.send('tente novamente');
+       //res.send('tente novamente');
+       error.innerHTML = "tente again!";
     } else {
     //res.send(req.session.login);
     res.render('panel');  
 }                 
-})       
+}); 
 
 var usuarios = [
     {
