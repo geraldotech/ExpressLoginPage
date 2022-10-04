@@ -57,17 +57,16 @@ app.post('/admin/login',(req,res)=>{
      if(val.login == req.body.login && val.senha == req.body.senha){
        //  req.session.login = 'geraldo';   
         if(usuario == 'ge'){
-            res.render('panel',{usuario});
+            res.render('gera',{usuario});
         }
         if(usuario == 'isa'){
             res.render('isa',{usuario});
-        }
-            
-       } 
+        }            
+       }
         
-    })//map
-    //res.send('ok');  
-    res.redirect('/admin/login');  
+    }); //map
+    res.send('<a href="/admin/login">tentar novamente!</a>');  
+    //res.redirect('/admin/login'); 
 });
 
 //index page
