@@ -4,27 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>panel</title>
+    <title>cpanel - <%= usuario %></title>
    <link rel="stylesheet" href="../public/style.css">
 </head>
 <body>
-  <section class="container ">
-      <div>
-        <h1 class="pink">LOGADO COM SUCESSO</h1>       
-        <p>Isa template</p>
-        <p>Welcome: <%= usuario %></p>
-      </div>
-    <ul>
-        <li>Consultas</li>
-        <li>Cadastro</li>
-        <li>Senhas</li>
-        
-    </ul>
-    <div>
-        <a class="btn" href="/logout">Fazer logoff</a>
-    </div>
-  </section>
-
-
+  <section class="container">     
+    <%- include('cpanel.html'); %>   
+  <div>
+      <a class="btn" href="/logout">Fazer logoff</a>
+  </div>
+</section>
 </body>
 </html>
