@@ -5,19 +5,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    padding: 30px;
     height: 100vh;
     background-color: rgb(32, 32, 32);
     color: #f2f2f2;
 }
 .container {
     display: flex;
-    min-height: 100vh;
     width: 100%;
-    max-width: 992px;
-    gap: 50px;                         
-    flex-direction: column;
-    align-items: center;                
+    max-width: 992px;         
     padding: 30px;                 
     margin: auto;    
 }
@@ -35,6 +30,8 @@ body{
 
 .container .pink {
     color: pink;
+    font-size: 1rem;
+    font-weight: bold;
 }  
 
 .btn{
@@ -53,7 +50,6 @@ form input[type="submit"] {
     font-size: 0.9rem;
     background: dodgerblue;
     border: none;
-
 }
 
 input{
@@ -68,35 +64,38 @@ input:focus{
 h1{
     margin-bottom: 10px;
 }
-footer{
-    margin-top: 100px;
-}
 
 form {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    gap: 5px;
+    gap: 12px;
 }
 form input[type='submit']{
     margin-top: 20px;
+    
 }
 
-.input-field h2 {
-    margin-bottom: 2rem;
-}
-.form {
+.input-field{
     background: rgb(19, 64, 109);
     max-width: 300px;
-    min-height: 40vh;
     box-shadow: 5px 5px 15px rgba(207, 200, 200, 0.6);
     border-radius: 30px;
     padding: 2rem;
 }
 
+.input-field h2 {
+    margin-bottom: 2rem;
+}
+.forms {    
+    align-items: center;
+    justify-content: center;  
+    height: 100vh;   
+    margin-top: 30px;   
+}
+
 .input-field input{
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
+    font-size: 1rem;    
 }
 
 .menu_panel{
@@ -114,31 +113,62 @@ form input[type='submit']{
     font-size: 1.2rem;
 }
 
+footer{    
+    background: dodgerblue;  
+}
+
+.footer{
+    display: flex;
+    height: 50px;
+    align-content: center;
+    justify-content: space-evenly;   
+}
+
+.home {
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;  
+    height: 100vh;
+}
+
+.home .btn{
+    margin-top: 20px;
+}
+
+.painel{
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.painel .btn{
+    margin-top: 25px;
+}
+      
+
 @media (max-width: 650px){
     body{
-        font-size: 1.5rem;
-       
+        font-size: 1rem;       
     }
     .container{
         display: flex; 
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        max-width: 100%;
-        margin: auto;       
     }
-    footer{
-        display: flex;
-        align-items: flex-end;
-    }
-    .form{
-        width: 100%;
-        
+  .forms{
+        justify-content: flex-start;
     }
     input{
         font-size: .7;
     }
-    .input-field {
-        font-size: 1rem;
+    .form .input-field {
+        font-size: 1rem;   
+    }
+    .painel{
+        align-items: center;
+        justify-content: flex-start;
     }
   
 }
