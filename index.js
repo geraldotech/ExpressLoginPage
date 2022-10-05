@@ -27,9 +27,7 @@ app.get('/admin/login',(req,res)=>{
     if(req.session.login == null){        
        res.render('login');
        //res.send('tente novamente');
-    } else if(req.session.login == "isabella") {
-        res.send("oi geraldo");
-    }else {
+    } else {
     //res.send(req.session.login);
     res.render('panel');  
 }         
